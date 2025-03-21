@@ -1,1 +1,67 @@
-/*Ini CSS External*/
+/* Ini CSS External */
+
+body {
+    font-family: fantasy;
+}
+
+.main-header>h1 {
+    margin: 0px;
+    background-color: aquamarine;
+    padding: 24px;
+    text-align: center;
+}
+
+main {
+    background-color: cornsilk;
+    padding: 16px;
+    text-align: center;
+}
+
+.nav-fitur {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-fitur>a {
+    color: white;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 50%;
+    align-self: center;
+}
+
+.nav-fitur-non-active {
+    background-color: darkcyan;
+}
+
+.nav-fitur-active {
+    background-color: cornflowerblue;
+}
+
+.section-header {
+    background-color: aquamarine;
+    padding: 16px;
+}
+
+.section-image {
+    background-image: url(../assets/persegi.jpg);
+    width: 200px;
+    height: 100px;
+    justify-self: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.calculate-content {
+    border: 1px solid;
+    height: 300px;
+}
+
+section {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+footer {
+    text-align: center;
+}
