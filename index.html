@@ -8,62 +8,136 @@
 
     <!-- CSS External -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!--JavaScript-->
+    <script src="./js/script.js"></script>
 </head>
 
 <body>
     <!-- Header -->
     <header class="main-header">
-        <h1>Katik (Kalkulator Matematik)</h1>
+        <h1>KATIK <br> (Kalkulator Matematik)</h1>
     </header>
 
     <!-- Main Content -->
     <main>
         <!-- Welcome Speech -->
         <header>
-            <h1>Welcome to Katik</h1>
+            <h2>Welcome to Katik</h2>
         </header>
-        <p>Hai sobat selamat datang di katik!</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. </p>
+        <p>Hello teman-teman selamat datang di katik!</p>
+        <p>website ini saya buat untuk menghitung suatu luas dan keliling suatu persegi dan persegi panjang</p>
 
         <!-- Navigasi Fitur -->
         <div class="nav-fitur">
-            <a href="" class="nav-fitur-active">Persegi</a>
-            <a href="" class="nav-fitur-non-active">Persegi Panjang</a>
+            <button class="nav-fitur-active" onclick="showSection('persegi')">Persegi</button>
+            <button class="nav-fitur-non-active" onclick="showSection('persegi-panjang')">Persegi Panjang</button>
         </div>
 
-        <!-- Section Luas -->
+         <section id="persegi">
+                <!-- Section Luas -->
+            <section>
+                <header class="section-header">
+                    <h3>Luas Persegi</h3>
+                </header>
+
+                <!-- Gambar Luas -->
+                <div class="section-image-persegi"></div>
+
+                <!-- Konten Perhitungan -->
+                <div class="calculate-content"></div>
+
+                <!--Button-->
+                <div class="hitung">
+                    <button id="hitung-button">Hitung</button>
+                </div>
+
+                <!--Reset-->
+                <div class="reset">
+                    <button id="reset-button">Reset</button>
+                </div>
+            </section>
+
+            <!-- Section Keliling -->
+            <section>
+                <header class="section-header">
+                    <h3>Keliling Persegi</h3>
+                </header>
+
+                <!-- Gambar Keliling -->
+                <div class="section-image-persegi"></div>
+
+                <!-- Konten Perhitungan -->
+                <div class="calculate-content"></div>
+
+                <!--Button-->
+                <div class="hitung">
+                    <button id="hitung-button">Hitung</button>
+                </div>
+
+                <!--Reset-->
+                <div class="reset">
+                    <button id="reset-button">Reset</button>
+                </div>
+            </section>
+        </section>
+
+    <section id="persegi-panjang">
+            <!-- Section Luas -->
         <section>
             <header class="section-header">
-                <h1>Luas Persegi</h1>
+                <h3>Luas Persegi Panjang</h3>
             </header>
 
             <!-- Gambar Luas -->
-            <div class="section-image"></div>
+            <div class="section-image-persegi-panjang"></div>
 
             <!-- Konten Perhitungan -->
             <div class="calculate-content"></div>
+            <br>
+            <div class="calculate-content"></div>
+
+            <!--Button-->
+            <div class="hitung">
+                <button id="hitung-button">Hitung</button>
+            </div>
+
+            <!--Reset-->
+            <div class="reset">
+                <button id="reset-button">Reset</button>
+            </div>
         </section>
 
         <!-- Section Keliling -->
         <section>
             <header class="section-header">
-                <h1>Keliling Persegi</h1>
+                <h3>Keliling Persegi Panjang</h3>
             </header>
 
             <!-- Gambar Keliling -->
-            <div class="section-image"></div>
+            <div class="section-image-persegi-panjang"></div>
 
             <!-- Konten Perhitungan -->
             <div class="calculate-content"></div>
+            <br>
+            <div class="calculate-content"></div>
+
+            <!--Button-->
+            <div class="hitung">
+                <button id="hitung-button">Hitung</button>
+            </div>
+
+            <!--Reset-->
+            <div class="reset">
+                <button id="reset-button">Reset</button>
+            </div>
         </section>
+    </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>Made by Elang</p>
+        <p>Made by Elang Surya prananda</p>
     </footer>
 </body>
 

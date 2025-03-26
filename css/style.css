@@ -1,60 +1,104 @@
 /* Ini CSS External */
-
 body {
-    font-family: fantasy;
+    background-color: white;
+    font-family: lato, sans-serif;
 }
 
 .main-header>h1 {
+    background-color: #253745;
+    color: white;
     margin: 0px;
-    background-color: aquamarine;
-    padding: 24px;
+    font-size: 30px;
+    font-weight:700 !important;
+    height: 70px;
+    padding: 10px;
     text-align: center;
 }
 
 main {
-    background-color: cornsilk;
-    padding: 16px;
-    text-align: center;
+    background-color: white;
+    padding: 0px;
 }
 
 .nav-fitur {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    text-align: center;
 }
 
-.nav-fitur>a {
+.nav-fitur button {
     color: white;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    width: 50%;
+    background: #253745;
+    border: none;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 100%;
     align-self: center;
+    cursor: pointer;
 }
 
-.nav-fitur-non-active {
-    background-color: darkcyan;
+.nav-fitur button.active {
+    background-color: #253745;
 }
 
-.nav-fitur-active {
-    background-color: cornflowerblue;
+.nav-fitur button:not(.active) {
+    background-color: #253745;
+    color: white;
 }
 
 .section-header {
-    background-color: aquamarine;
-    padding: 16px;
+    background-color: #253745;
+    padding: 1px;
+    text-align: center;
+    color: white;
 }
 
-.section-image {
-    background-image: url(../assets/persegi.jpg);
-    width: 200px;
-    height: 100px;
+.section-image-persegi{
+    background-image: url(../assets/formulaPersegi.png);
+    margin-top: 5px;
+    width: 280px;
+    height: 106px;
     justify-self: center;
-    background-size: cover;
+    background-position: center;
+}
+
+.section-image-persegi-panjang{
+    background-image: url(../assets/formulaPersegiPanjang.png);
+    margin-top: 5px;
+    width: 352px;
+    height: 111px;
+    justify-self: center;
     background-position: center;
 }
 
 .calculate-content {
+    border-color: #253745;
     border: 1px solid;
-    height: 300px;
+    height: 30px;
+}
+
+.hitung {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset {
+    display: flex;
+    justify-content: end;
+}
+
+#hitung-button{
+    border-color: #253745;
+    background-color: #253745;
+    color: white;
+}
+
+#reset-button{
+    border-color: #253745;
+    background-color: #e3e3e3;
+    color: #253745;
 }
 
 section {
