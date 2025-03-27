@@ -1,25 +1,58 @@
-/* Ini CSS External */
+/* CSS External */
 body {
-    background-color: white;
+    background-color: #F5F7FA;
     font-family: lato, sans-serif;
 }
 
+/* header utama */
+header {
+    background-color: #1E3A5F;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgb(2, 2, 84);
+    filter: drop-shadow(0 0 5px #1E3A5F);
+}
+
 .main-header>h1 {
-    background-color: #253745;
+    background-color: #1E3A5F;
     color: white;
     margin: 0px;
-    font-size: 30px;
-    font-weight:700 !important;
+    font-size: 29px;
+    font-weight: 700 !important;
     height: 70px;
     padding: 10px;
     text-align: center;
+    border-radius: 5px;
 }
 
+/* tampilan utama */
 main {
     background-color: white;
     padding: 0px;
 }
 
+/* box welcome */
+.opening {
+    background: rgb(247, 244, 244);
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto;
+    min-width: 300px;
+    max-width: 800px;
+    width: 80%;
+    border-radius: 5px;
+    filter: drop-shadow(0 0 6px rgb(200, 195, 195));
+}
+
+.opening h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0px;
+}
+
+/* Navigasi fitur */
 .nav-fitur {
     display: flex;
     flex-direction: row;
@@ -28,84 +61,193 @@ main {
 
 .nav-fitur button {
     color: white;
-    background: #253745;
+    background: #90A4AE;
     border: none;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding: 5px;
     width: 100%;
     align-self: center;
     cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    transition: 0.3s;
 }
 
+/* Tombol aktif saat dipilih */
 .nav-fitur button.active {
-    background-color: #253745;
+    background: #1976D2;
+    filter: drop-shadow(0 0 5px #1976D2);
 }
 
+/* Tombol yang tidak aktif saat tidak dipilih */
 .nav-fitur button:not(.active) {
-    background-color: #253745;
-    color: white;
+    background-color: #D6D6D6;
+    color:#000000;
 }
 
+/* Kontainer utama */
+.container {
+    width: 80%;
+    min-width: 300px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: rgb(247, 244, 244);
+    padding: 20px;
+    border-radius: 5px;
+    filter: drop-shadow(0 0 15px rgb(200, 195, 195));
+}
+
+/* header isi */
 .section-header {
-    background-color: #253745;
+    background-color: #1E3A5F;
+    box-shadow: 0 2px 5px rgb(2, 2, 84);
     padding: 1px;
     text-align: center;
     color: white;
+    border-radius: 5px;
 }
 
-.section-image-persegi{
+/* Gambar latar belakang persegi */
+.section-image-persegi {
     background-image: url(../assets/formulaPersegi.png);
-    margin-top: 5px;
-    width: 280px;
+    margin: 20px auto;
+    width: 229px;
     height: 106px;
+    display: flex;
     justify-self: center;
     background-position: center;
 }
 
-.section-image-persegi-panjang{
+/* Gambar latar belakang persegi panjang */
+.section-image-persegi-panjang {
     background-image: url(../assets/formulaPersegiPanjang.png);
-    margin-top: 5px;
-    width: 352px;
+    margin: 20px auto;
+    width: 279px;
     height: 111px;
+    display: flex;
     justify-self: center;
     background-position: center;
 }
 
-.calculate-content {
-    border-color: #253745;
-    border: 1px solid;
-    height: 30px;
-}
-
-.hitung {
-    display: flex;
+/* input box */
+input {
+    border: 1px solid #1E3A5F;
     padding: 10px;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    background: #f1f1f1;
+    margin: auto;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    display: block; /* Pastikan tidak inline */
+    margin-bottom: 5px;
 }
 
-.reset {
-    display: flex;
-    justify-content: end;
+/* Efek input */
+input:focus {
+    background-color: #ffffff;
+    border-color: #1976D2;
+    box-shadow: 0px 0px 5px rgba(30, 136, 229, 0.5);
+    transition: all 0.2s ease-in-out;
 }
 
-#hitung-button{
-    border-color: #253745;
-    background-color: #253745;
+/* Wrapper tombol */
+.button-wrapper {
+    margin-top: 10px;
+}
+
+/* Tombol hitung */
+#hitung-button {
+    border: 1px solid #135BA0;
+    background-color: #1976D2;
+    box-shadow: #1976D2;
     color: white;
+    text-align: center;
+    padding: 2px 6px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
 }
 
-#reset-button{
-    border-color: #253745;
-    background-color: #e3e3e3;
-    color: #253745;
+/* Efek hover pada tombol hitung */
+#hitung-button:hover {
+    background-color: #135BA0;
+    border-color: #1976D2;
+    box-shadow: #1976D2;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
 }
 
+/* Tombol reset */
+#reset-button {
+    border: 1px solid #8B0000;
+    background-color: #C62828;
+    color: white;
+    text-align: center;
+    padding: 2px 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Efek hover pada tombol reset */
+#reset-button:hover {
+    background-color: #A12424;
+    border-color: #FF5A5A;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Efek transisi pada tombol hitung dan reset */
+#hitung-button, #reset-button {
+    transition: all 0.3s ease-in-out;
+}
+
+#hitung-button:active, #reset-button:active {
+    transform: scale(0.95);
+    transition: all 0.1s ease-in-out;
+}
+
+/* Box hasil perhitungan */
+.hasil {
+    display: none;
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #E3F2FD;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Efek hasil */
+.hasil.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Margin tambahan untuk tiap section */
 section {
     margin-top: 16px;
     margin-bottom: 16px;
 }
 
+/* Footer credits */
 footer {
     text-align: center;
+    padding: 1px;
+    background-color: #1E3A5F;
+    color: white;
+    text-shadow: 0 0 10px #1E3A5F;
+    box-shadow: 0 0 8px #1E3A5F;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Responsivitas: Ubah navigasi fitur menjadi vertikal di layar kecil */
+@media screen and (max-width: 400px) {
+    .nav-fitur {
+        flex-direction: column;
+    }
 }

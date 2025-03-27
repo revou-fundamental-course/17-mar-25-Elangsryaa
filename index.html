@@ -8,137 +8,155 @@
 
     <!-- CSS External -->
     <link rel="stylesheet" href="css/style.css">
-
-    <!--JavaScript-->
-    <script src="./js/script.js"></script>
 </head>
 
 <body>
     <!-- Header -->
     <header class="main-header">
-        <h1>KATIK <br> (Kalkulator Matematik)</h1>
+        <h1>KATIK🖥<br> (Kalkulator Matematik)</h1>
     </header>
 
     <!-- Main Content -->
     <main>
-        <!-- Welcome Speech -->
-        <header>
-            <h2>Welcome to Katik</h2>
-        </header>
-        <p>Hello teman-teman selamat datang di katik!</p>
-        <p>website ini saya buat untuk menghitung suatu luas dan keliling suatu persegi dan persegi panjang</p>
+        <section class="opening">
+            <!-- Welcome Speech -->
+            <header>
+                <h2>Welcome to KATIK</h2>
+            </header>
+            <p>👋 Halo teman-teman, selamat datang di <b>KATIK!</b></p>  
+            <p>Di sini, kamu bisa dengan mudah menghitung luas dan keliling bangun datar. Selamat mencoba! ✨</p>              
+        </section>
 
-        <!-- Navigasi Fitur -->
-        <div class="nav-fitur">
-            <button class="nav-fitur-active" onclick="showSection('persegi')">Persegi</button>
-            <button class="nav-fitur-non-active" onclick="showSection('persegi-panjang')">Persegi Panjang</button>
-        </div>
+        <div class="container">
+            <!-- Navigasi Fitur -->
+            <div class="nav-fitur">
+                <button class="nav-fitur-active" onclick="showSection('persegi')">Persegi</button>
+                <button class="nav-fitur-non-active" onclick="showSection('persegi-panjang')">Persegi Panjang</button>
+            </div>
 
-         <section id="persegi">
+            <section id="persegi">
                 <!-- Section Luas -->
-            <section>
-                <header class="section-header">
-                    <h3>Luas Persegi</h3>
-                </header>
+                <section>
+                    <header class="section-header">
+                        <h3>Luas Persegi</h3>
+                    </header>
 
-                <!-- Gambar Luas -->
-                <div class="section-image-persegi"></div>
+                    <!-- Gambar Luas -->
+                    <div class="section-image-persegi"></div>
 
-                <!-- Konten Perhitungan -->
-                <div class="calculate-content"></div>
+                    <!-- Konten Perhitungan -->
+                    <div class="calculate-content">
+                        <form id="hitung-luas-persegi">
+                            <div>
+                                <!--Mandatory to Fill-->
+                                <input type="number" id="luas-sisi-persegi" placeholder="Masukkan panjang sisi" required>
+                            </div>
+                            <div id="hasil-luas-persegi" class="hasil"></div>
+                            <div class="button-wrapper">
+                            <!--Button-->
+                            <button type="submit" id="hitung-button" onclick="validateForm()">Hitung</button>
+                            <!--Reset-->
+                            <button type="reset" id="reset-button">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
 
-                <!--Button-->
-                <div class="hitung">
-                    <button id="hitung-button">Hitung</button>
-                </div>
+                <!-- Section keliling -->
+                <section>
+                    <header class="section-header">
+                        <h3>Keliling Persegi</h3>
+                    </header>
 
-                <!--Reset-->
-                <div class="reset">
-                    <button id="reset-button">Reset</button>
-                </div>
+                    <!-- Gambar kelilling -->
+                    <div class="section-image-persegi"></div>
+
+                    <!-- Konten Perhitungan -->
+                    <div class="calculate-content">
+                        <form id="hitung-keliling-persegi">
+                            <div>
+                                <!--Mandatory to Fill-->
+                                <input type="number" id="keliling-sisi-persegi" placeholder="Masukkan panjang sisi" required>
+                            </div>
+                            <div id="hasil-keliling-persegi" class="hasil"></div>
+                            <div class="button-wrapper">
+                            <!--Button-->
+                            <button type="submit" id="hitung-button" onclick="validateForm()">Hitung</button>
+                            <!--Reset-->
+                            <button type="reset" id="reset-button">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
             </section>
 
-            <!-- Section Keliling -->
-            <section>
-                <header class="section-header">
-                    <h3>Keliling Persegi</h3>
-                </header>
+            <section id="persegi-panjang" style="display: none;">
+                <!-- Section Luas -->
+                <section>
+                    <header class="section-header">
+                        <h3>Luas Persegi panjang</h3>
+                    </header>
 
-                <!-- Gambar Keliling -->
-                <div class="section-image-persegi"></div>
+                    <!-- Gambar Luas -->
+                    <div class="section-image-persegi-panjang"></div>
 
-                <!-- Konten Perhitungan -->
-                <div class="calculate-content"></div>
+                    <!-- Konten Perhitungan -->
+                    <div class="calculate-content">
+                        <form id="hitung-luas-persegi-panjang">
+                            <div>
+                                <!--Mandatory to Fill-->
+                                <input type="number" id="luas-panjang-persegi-panjang" placeholder="Masukkan panjang sisi" required>
+                                <input type="number" id="luas-lebar-persegi-panjang" placeholder="Masukkan lebar sisi" required>
+                            </div>
+                            <div id="hasil-luas-persegi-panjang" class="hasil"></div>
+                            <div class="button-wrapper">
+                            <!--Button-->
+                            <button type="submit" id="hitung-button" onclick="validateForm()">Hitung</button>
+                            <!--Reset-->
+                            <button type="reset" id="reset-button">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
 
-                <!--Button-->
-                <div class="hitung">
-                    <button id="hitung-button">Hitung</button>
-                </div>
+                <!-- Section keliling -->
+                <section>
+                    <header class="section-header">
+                        <h3>Keliling Persegi Panjang</h3>
+                    </header>
 
-                <!--Reset-->
-                <div class="reset">
-                    <button id="reset-button">Reset</button>
-                </div>
+                    <!-- Gambar kelilling -->
+                    <div class="section-image-persegi-panjang"></div>
+
+                    <!-- Konten Perhitungan -->
+                    <div class="calculate-content">
+                        <form id="hitung-keliling-persegi-panjang">
+                            <div>
+                                <!--Mandatory to Fill-->
+                                <input type="number" id="keliling-panjang-persegi-panjang" placeholder="Masukkan panjang sisi" required>
+                                <input type="number" id="keliling-lebar-persegi-panjang" placeholder="Masukkan lebar sisi" required>
+                            </div>
+                            <div id="hasil-keliling-persegi-panjang" class="hasil"></div>
+                            <div class="button-wrapper">
+                            <!--Button-->
+                            <button type="submit" id="hitung-button" onclick="validateForm()">Hitung</button>
+                            <!--Reset-->
+                            <button type="reset" id="reset-button">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
             </section>
-        </section>
-
-    <section id="persegi-panjang">
-            <!-- Section Luas -->
-        <section>
-            <header class="section-header">
-                <h3>Luas Persegi Panjang</h3>
-            </header>
-
-            <!-- Gambar Luas -->
-            <div class="section-image-persegi-panjang"></div>
-
-            <!-- Konten Perhitungan -->
-            <div class="calculate-content"></div>
-            <br>
-            <div class="calculate-content"></div>
-
-            <!--Button-->
-            <div class="hitung">
-                <button id="hitung-button">Hitung</button>
-            </div>
-
-            <!--Reset-->
-            <div class="reset">
-                <button id="reset-button">Reset</button>
-            </div>
-        </section>
-
-        <!-- Section Keliling -->
-        <section>
-            <header class="section-header">
-                <h3>Keliling Persegi Panjang</h3>
-            </header>
-
-            <!-- Gambar Keliling -->
-            <div class="section-image-persegi-panjang"></div>
-
-            <!-- Konten Perhitungan -->
-            <div class="calculate-content"></div>
-            <br>
-            <div class="calculate-content"></div>
-
-            <!--Button-->
-            <div class="hitung">
-                <button id="hitung-button">Hitung</button>
-            </div>
-
-            <!--Reset-->
-            <div class="reset">
-                <button id="reset-button">Reset</button>
-            </div>
-        </section>
-    </section>
+        </div>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>Made by Elang Surya prananda</p>
+        <p>Made by Elang Surya Prananda</p>
     </footer>
+
+    <!--JavaScript-->
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
